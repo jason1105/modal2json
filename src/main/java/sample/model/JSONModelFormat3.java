@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * For Three.js, see https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3.
  * Created by lv-wei on 2018-03-19.
  */
 public class JSONModelFormat3 {
@@ -46,7 +47,7 @@ public class JSONModelFormat3 {
     }
 
     public JSONModelFormat3 addColor(int red, int green, int blue) {
-        this.colors.add(red << 16 + green << 8 + blue);
+        this.colors.add((red << 16) + (green << 8) + blue);
         return this;
     }
 

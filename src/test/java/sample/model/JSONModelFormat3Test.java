@@ -1,9 +1,11 @@
 package sample.model;
 
+import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
 import java.util.Arrays;
 
 /**
@@ -63,7 +65,14 @@ public class JSONModelFormat3Test {
 
         model.setMeatdata(meta);
 
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(new File("student.json"), model);
+    }
 
+    @Test
+    public void plate() {
+        File xyz = new File("C:\\projects\\angular\\three-partice2\\src\\assets\\model\\circuit-board\\电路板声模态1#1.xyz");
+        File pcl = new File("C:\\projects\\angular\\three-partice2\\src\\assets\\model\\circuit-board\\电路板声模态1#.pcl");
     }
 
 }

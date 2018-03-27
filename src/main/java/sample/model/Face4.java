@@ -4,7 +4,7 @@ package sample.model;
  * Created by lv-wei on 2018-03-19.
  */
 public class Face4 {
-    int mode = 131;
+    int mode = 131; // Three.js format
     int a, b, c, d; // index of vertices
     int m; // index of material
     int ac, bc, cc, dc; // index of colors
